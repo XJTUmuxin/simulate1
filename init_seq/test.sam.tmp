@@ -1,4 +1,0 @@
-@HD	VN:1.5	SO:UNKNOWN	pb:3.0.1
-@SQ	SN:ref	LN:477	M5:c2a82ace293c155cfe48bdc2e4c541af
-@RG	ID:1c1dbd69	PL:PACBIO	DS:READTYPE=SUBREAD;DeletionQV=dq;DeletionTag=dt;InsertionQV=iq;MergeQV=mq;SubstitutionQV=sq	PU:read.fasta	PM:SEQUEL
-@PG	ID:1	PN:BLASR	VN:5.3.5-5.3.5	CL:blasr read.fasta ref.fasta --sam --out test.sam 

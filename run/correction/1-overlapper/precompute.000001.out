@@ -1,0 +1,60 @@
+
+Found perl:
+   /usr/bin/perl
+   This is perl 5, version 30, subversion 0 (v5.30.0) built for x86_64-linux-gnu-thread-multi
+
+Found java:
+   /usr/local/java/jdk1.8.0_321/bin/java
+   java version "1.8.0_321"
+
+Found canu:
+   /home/zmx/work/canu/build/bin/canu
+   canu snapshot v2.3-development +13 changes (r10284 08b0347f8655ed977a2ac75d35be198601bd7b3d)
+
+Running job 1 based on command line options.
+/home/zmx/c++/毕设/simulate1/run/correction/1-overlapper
+Opened seqStore '../../test.seqStore' for 'raw' reads.
+Dumping raw reads from 1 to 100 (inclusive).
+
+Starting mhap precompute.
+
+Running with these settings:
+--filter-threshold = 1.0E-7
+--help = false
+--max-shift = 0.2
+--min-olap-length = 500
+--min-store-length = 0
+--no-rc = false
+--no-self = false
+--no-tf = false
+--num-hashes = 768
+--num-min-matches = 2
+--num-threads = 1
+--ordered-kmer-size = 12
+--ordered-sketch-size = 1536
+--repeat-idf-scale = 10.0
+--repeat-weight = 0.9
+--settings = 0
+--store-full-id = true
+--supress-noise = 0
+--threshold = 0.73
+--version = false
+-f = ../../0-mercounts/test.ms16.ignore.gz
+-h = false
+-k = 16
+-p = ./000001.input.fasta
+-q = .
+-s = 
+
+Reading in filter file ../../0-mercounts/test.ms16.ignore.gz.
+Read in values for repeat 0 and 0
+Warning, k-mer filter file has zero elements.
+Initializing
+Initialized
+Time (s) to read filter file: 0.147616411
+Read in k-mer filter for sizes: []
+Processing FASTA files for binary compression...
+Processed 200 sequences (fwd and rev).
+Read, hashed, and stored file ./000001.input.fasta to ./000001.input.dat.
+Time (s): 3.2906250690000003
+Total time (s): 3.2913676460000003

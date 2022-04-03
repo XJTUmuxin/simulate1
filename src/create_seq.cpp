@@ -1,9 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
+string init_seq_path = "./../init_seq/";
+string sub_seq_path = "./../sub_seq/";
+string mis_seq_path = "./../mis_seq/";
 int expect_len = 10000;
 int min_mic_len = 1000; 
-int substrings_len = 100;
-int substrings_num = 20;
+int substrings_len = 1000;
+int substrings_num = 100;
 int max_repeat_num = 60;
 int mic_num = 5;
 int error_rate = 15;
@@ -20,7 +23,7 @@ void create_init_seq(string& init_seq){
     m_indexs.push_back(INT_MAX);
     int m_num = 0;
     int m_index = m_indexs[m_num];
-    
+    ofstream ofs(init_seq_path+"expect_mic");
     while(init_seq.size()<expect_len || mic_num>0){
         if(init_seq.size()>m_index){
             string motif = motifs[m_num];
@@ -31,7 +34,7 @@ void create_init_seq(string& init_seq){
             else{
                 repeat_num = 2+rand()%(max_repeat_num-2);
             }
-            cout<<"index: "<<init_seq.size()<<endl<<"motif: "<<motif<<endl<<"repeat_num: "<<repeat_num<<endl;
+            ofs<<"index: "<<init_seq.size()<<endl<<"motif: "<<motif<<endl<<"repeat_num: "<<repeat_num<<endl;
             for(int i=0;i<repeat_num;++i){
                 init_seq += motif;
             }
@@ -42,6 +45,9 @@ void create_init_seq(string& init_seq){
         int temp = rand()%4;
         init_seq += bases[temp];
     }
+    ofs<<"seq_size: "<<init_seq.size()<<endl;
+    ofs.close();
+    ofs.clear();
 } 
 
 void create_mis_seq(string& init_seq,string& mis_seq){
@@ -82,18 +88,22 @@ int main(){
     create_init_seq(init_seq);
     create_mis_seq(init_seq,mis_seq);
     get_substrings(init_seq,substrings);
-    cout<<"seq size: "<<init_seq.size()<<endl;
-    ofstream ofs("init_seq.out");
-    ofs<<init_seq;
+    ofstream ofs(init_seq_path+"init_seq.fasta");
+    ofs<<">init_seq"<<endl;
+    ofs<<init_seq<<endl;
     ofs.close();
     ofs.clear();
-    ofs.open("mis_seq.out");
-    ofs<<mis_seq;
+    ofs.open(mis_seq_path+"mis_seq.fasta");
+    ofs<<">mis_seq"<<endl;
+    ofs<<mis_seq<<endl;
     ofs.close();
     ofs.clear();
-    ofs.open("sub_seq.out");
+    ofs.open(sub_seq_path+"sub_seq.fasta");
+    int number = 1;
     for(auto &str:substrings){
+        ofs<<(">read"+to_string(number))<<endl;
         ofs<<str<<endl;
+        number++;
     }
     ofs.close();
     ofs.clear();

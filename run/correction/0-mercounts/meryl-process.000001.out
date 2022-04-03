@@ -1,0 +1,45 @@
+
+Found perl:
+   /usr/bin/perl
+   This is perl 5, version 30, subversion 0 (v5.30.0) built for x86_64-linux-gnu-thread-multi
+
+Found java:
+   /usr/local/java/jdk1.8.0_321/bin/java
+   java version "1.8.0_321"
+
+Found canu:
+   /home/zmx/work/canu/build/bin/canu
+   canu snapshot v2.3-development +13 changes (r10284 08b0347f8655ed977a2ac75d35be198601bd7b3d)
+
+Running job 1 based on command line options.
+
+Found 1 command tree.
+
+PROCESSING TREE #1 using 1 thread.
+  opGreaterThan
+    threshold=1
+    opUnionSum
+      ./test.01.meryl
+    output to test.ms16.WORKING
+
+Cleaning up.
+
+Bye.
+
+Found 1 command tree.
+
+Found 1 command tree.
+
+PROCESSING TREE #1 using 1 thread.
+  opAtLeast
+    threshold=50
+    opAtLeast
+      word-frequenct=0.000000
+      ./test.ms16
+    print to ./test.ms16.##.dump
+
+Cleaning up.
+
+Bye.
+
+Found 1 command tree.
