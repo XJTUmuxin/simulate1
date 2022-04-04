@@ -55,11 +55,13 @@ int main(){
     ifs.open(map_result_path+"map_result.out");
     string line;
     getline(ifs,line);
+    //int reads_num = 0;
     while(ifs){
         getline(ifs,line);
         map_result result(line);
         if(result.matchPercentage>=0.8 && result.numIns==result.numDel){
-            int index = result.qStart;
+            //reads_num++;
+            int index = 0;
             for(int i=result.tStart;i<result.tEnd;++i){
                 while(result.qAlignedSeq[index]=='-')index++;
                 if(index>=result.qLength)break;
@@ -68,11 +70,12 @@ int main(){
             }           
         }
     }
+    //cout<<reads_num<<endl;
     for(int i=0;i<seq_len;++i){
         sort(base_count[i].begin(),base_count[i].end(),[](const pair<char,int>p1,const pair<char,int>p2){return p1.second>p2.second;});
-        if(base_count[i][0].second>0){
+        //if(base_count[i][0].second>0){
             seq[i] = base_count[i][0].first;
-        }
+        //}
     }
     ifs.close();
     ifs.clear();

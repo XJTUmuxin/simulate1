@@ -85,12 +85,8 @@ void mic_count(string &seq){
 int main(){
     string seq;
     ifstream ifs(corrected_seq_path+"corrected.fasta");
-    string temp;
     getline(ifs,seq);
-    while(ifs){
-        getline(ifs,temp);
-        seq+=temp;
-    }
+    getline(ifs,seq);
     ifs.close();
     ifs.clear();
     mic_count(seq);
