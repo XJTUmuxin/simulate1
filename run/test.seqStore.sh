@@ -40,7 +40,7 @@ export CANU_OBJECT_STORE_PROJECT=
   -genomesize 10000 \
   -coverage   200 \
   -bias       0 \
-  -raw -pacbio sub_seq /home/zmx/c++/毕设/simulate1/sub_seq/sub_seq.fasta \
+  -corrected -trimmed -pacbio sub_seq /home/zmx/c++/毕设/simulate1/sub_seq/sub_seq.fasta \
 && \
 mv ./test.seqStore.BUILDING ./test.seqStore \
 && \

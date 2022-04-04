@@ -6,7 +6,7 @@ string mis_seq_path = "./../mis_seq/";
 int expect_len = 10000;
 int min_mic_len = 1000; 
 int substrings_len = 1000;
-int substrings_num = 100;
+int substrings_num = 200;
 int max_repeat_num = 60;
 int mic_num = 5;
 int error_rate = 15;
@@ -23,7 +23,7 @@ void create_init_seq(string& init_seq){
     m_indexs.push_back(INT_MAX);
     int m_num = 0;
     int m_index = m_indexs[m_num];
-    ofstream ofs(init_seq_path+"expect_mic");
+    ofstream ofs(init_seq_path+"expect_mic.out");
     while(init_seq.size()<expect_len || mic_num>0){
         if(init_seq.size()>m_index){
             string motif = motifs[m_num];
@@ -34,7 +34,7 @@ void create_init_seq(string& init_seq){
             else{
                 repeat_num = 2+rand()%(max_repeat_num-2);
             }
-            ofs<<"index: "<<init_seq.size()<<endl<<"motif: "<<motif<<endl<<"repeat_num: "<<repeat_num<<endl;
+            ofs<<"motif: "<<motif<<endl<<"index: "<<init_seq.size()<<endl<<"repeat_num: "<<repeat_num<<endl;
             for(int i=0;i<repeat_num;++i){
                 init_seq += motif;
             }
@@ -69,14 +69,17 @@ void create_mis_seq(string& init_seq,string& mis_seq){
 }
 
 void get_substrings(string& init_seq,vector<string>& substrings){
+    //vector<int> temp(10,0);
     for(int i=0;i<substrings_num;++i){
         int start_index;
         while(true){
             start_index = rand()%init_seq.size();
             if(start_index+substrings_len<=init_seq.size())break;
         }
+        //temp[start_index/1000]++;
         substrings.emplace_back(init_seq,start_index,substrings_len);
     }
+    //for(auto i:temp)cout<<i<<endl;
 }
 
 int main(){

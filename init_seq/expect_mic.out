@@ -1,0 +1,16 @@
+motif: AC
+index: 1800
+repeat_num: 6
+motif: TCAT
+index: 2148
+repeat_num: 39
+motif: AGAG
+index: 4008
+repeat_num: 6
+motif: ATCATC
+index: 4872
+repeat_num: 50
+motif: TATATA
+index: 5681
+repeat_num: 85
+seq_size: 10000

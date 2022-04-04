@@ -1,11 +1,11 @@
      Reads        Bases Read Type
 ---------- ------------ ----------------------------------------
-       100            - total-reads
-       100       100000 raw
+     10000            - total-reads
+         0            0 raw
          0            0 raw-trimmed
-       100        77225 raw-compressed
+         0            0 raw-compressed
          0            0 raw-compressed-trimmed
-         0            0 corrected
-         0            0 corrected-trimmed
-         0            0 corrected-compressed
-         0            0 corrected-compressed-trimmed
+      2000      2000000 corrected
+      2000      2000000 corrected-trimmed
+      2000      1534502 corrected-compressed
+      2000      1534502 corrected-compressed-trimmed

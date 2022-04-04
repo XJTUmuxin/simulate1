@@ -1,0 +1,51 @@
+
+Found perl:
+   /usr/bin/perl
+   This is perl 5, version 30, subversion 0 (v5.30.0) built for x86_64-linux-gnu-thread-multi
+
+Found java:
+   /usr/local/java/jdk1.8.0_321/bin/java
+   java version "1.8.0_321"
+
+Found canu:
+   /home/zmx/work/canu/build/bin/canu
+   canu snapshot v2.3-development +13 changes (r10284 08b0347f8655ed977a2ac75d35be198601bd7b3d)
+
+Running job 1 based on command line options.
+sqCache: found 2000 corrected-trimmed reads with 2000000 bases.
+Initializing 1 work areas.
+Loading reference reads 1-10000 inclusive.
+Loading 2000 reads and 2000000 bases from range 1-10000 inclusive.
+Loading        1 <     4567 <    10000 -   45.66% - 0.00 GBLoading        1 <     9134 <    10000 -   91.34% - 0.00 GBLoading        1 <    10000 <    10000 -  100.00% - 0.00 GB
+Build_Hash_Index from 1 to 10000
+
+Found 2000 reads with length 2002000 to load; 8000 skipped by being too short; 0 skipped per library restriction
+HASH LOADING STOPPED: curID           10000 out of        10000
+HASH LOADING STOPPED: length        2002000 out of      2002000 max.
+HASH LOADING STOPPED: entries          9085 out of     70464307 max (load 0.01).
+
+Read 2 kmers to mark to skip
+
+
+Range: 1-10000.  Store has 10000 reads.
+Chunk: 1250 reads/thread -- (G.endRefID=10000 - G.bgnRefID=1) / G.Num_PThreads=1 / 8
+
+Starting 1-10000 with 1250 per thread
+
+Thread 00 processes reads 1-1250
+Thread 00 writes    reads 1-1250 (8369 overlaps 52059/45034/0 kmer hits with/without overlap/skipped)
+Thread 00 processes reads 1251-2500
+Thread 00 writes    reads 1251-2500 (1994 overlaps 45684/39136/0 kmer hits with/without overlap/skipped)
+Thread 00 processes reads 2501-3750
+Thread 00 writes    reads 2501-3750 (39130 overlaps 39130/34091/0 kmer hits with/without overlap/skipped)
+Thread 00 processes reads 3751-5000
+Thread 00 writes    reads 3751-5000 (27735 overlaps 27735/24086/0 kmer hits with/without overlap/skipped)
+Thread 00 processes reads 5001-6250
+Thread 00 writes    reads 5001-6250 (21382 overlaps 21382/18724/0 kmer hits with/without overlap/skipped)
+Thread 00 processes reads 6251-7500
+Thread 00 writes    reads 6251-7500 (17733 overlaps 17733/15153/0 kmer hits with/without overlap/skipped)
+Thread 00 processes reads 7501-8750
+Thread 00 writes    reads 7501-8750 (9113 overlaps 9113/7911/0 kmer hits with/without overlap/skipped)
+Thread 00 processes reads 8751-10000
+Thread 00 writes    reads 8751-10000 (3114 overlaps 3114/2835/0 kmer hits with/without overlap/skipped)
+Bye.

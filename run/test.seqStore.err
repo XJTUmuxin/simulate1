@@ -12,18 +12,27 @@ Found canu:
    canu snapshot v2.3-development +13 changes (r10284 08b0347f8655ed977a2ac75d35be198601bd7b3d)
 
 
-Creating library 'sub_seq' for PacBio raw reads.
+Creating library 'sub_seq' for PacBio corrected-trimmed reads.
 
                reads               bases
 ---------- --------- ------ ------------ ------
-Loaded           100 100.0%       100000 100.0%  /home/zmx/c++/毕设/simulate1/sub_seq/sub_seq.fasta
+Loaded         10000 100.0%     10000000 100.0%  /home/zmx/c++/毕设/simulate1/sub_seq/sub_seq.fasta
 
 
 All reads processed.
 
                reads               bases
 ---------- --------- ------ ------------ ------
-Loaded           100 100.0%       100000 100.0%
+Loaded         10000 100.0%     10000000 100.0%
 
+
+EXCESSIVE COVERAGE DETECTED.  Sampling reads.
+
+For genome size of        10000 bases,
+            retain      2000000 bases (200.00X coverage).
+
+Found        10000 reads with     10000000 bases (1000.00X coverage).
+Dropped       8000 reads with      8000000 bases (800.00X coverage).
+Retained      2000 reads with      2000000 bases (200.00X coverage).
 
 Bye.

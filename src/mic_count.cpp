@@ -1,5 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
+string mis_seq_path = "./../mis_seq/";
+string result_path = "./../result/";
+string corrected_seq_path = "./../corrected/";
 class microsatellite{
 public:
     string motif;
@@ -72,7 +75,7 @@ void mic_count(string &seq){
             }
         }
     }
-    ofstream ofs("result.out");
+    ofstream ofs(result_path+"result.out");
     for(auto &micro:micros){
         ofs<<micro.motif<<endl<<"left_index: "<<micro.left_index<<endl<<"right_index: "<<micro.right_index<<endl<<"repeate_num: "<<micro.repeate_num<<endl;
     }
@@ -81,8 +84,13 @@ void mic_count(string &seq){
 }
 int main(){
     string seq;
-    ifstream ifs("init_seq.out");
-    ifs>>seq;
+    ifstream ifs(corrected_seq_path+"corrected.fasta");
+    string temp;
+    getline(ifs,seq);
+    while(ifs){
+        getline(ifs,temp);
+        seq+=temp;
+    }
     ifs.close();
     ifs.clear();
     mic_count(seq);

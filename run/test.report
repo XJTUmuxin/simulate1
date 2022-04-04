@@ -1,115 +1,208 @@
-[CORRECTION/READS]
+[TRIMMING/READS]
 --
 -- In sequence store './test.seqStore':
---   Found 100 reads.
---   Found 100000 bases (10 times coverage).
---    Histogram of raw reads:
+--   Found 2000 reads.
+--   Found 2000000 bases (200 times coverage).
+--    Histogram of corrected reads:
 --    
---    G=100000                           sum of  ||               length     num
+--    G=2000000                          sum of  ||               length     num
 --    NG         length     index       lengths  ||                range    seqs
 --    ----- ------------ --------- ------------  ||  ------------------- -------
---    00010         1000         9        10000  ||       1000               100|---------------------------------------------------------------
---    00020         1000        19        20000  ||
---    00030         1000        29        30000  ||
---    00040         1000        39        40000  ||
---    00050         1000        49        50000  ||
---    00060         1000        59        60000  ||
---    00070         1000        69        70000  ||
---    00080         1000        79        80000  ||
---    00090         1000        89        90000  ||
---    00100         1000        99       100000  ||
---    001.000x                 100       100000  ||
+--    00010         1000       199       200000  ||       1000              2000|---------------------------------------------------------------
+--    00020         1000       399       400000  ||
+--    00030         1000       599       600000  ||
+--    00040         1000       799       800000  ||
+--    00050         1000       999      1000000  ||
+--    00060         1000      1199      1200000  ||
+--    00070         1000      1399      1400000  ||
+--    00080         1000      1599      1600000  ||
+--    00090         1000      1799      1800000  ||
+--    00100         1000      1999      2000000  ||
+--    001.000x                2000      2000000  ||
 --
 
-[CORRECTION/MERS]
+[UNITIGGING/READS]
 --
---  16-mers                                                                                           Fraction
+-- In sequence store './test.seqStore':
+--   Found 2000 reads.
+--   Found 2000000 bases (200 times coverage).
+--    Histogram of corrected-trimmed reads:
+--    
+--    G=2000000                          sum of  ||               length     num
+--    NG         length     index       lengths  ||                range    seqs
+--    ----- ------------ --------- ------------  ||  ------------------- -------
+--    00010         1000       199       200000  ||       1000              2000|---------------------------------------------------------------
+--    00020         1000       399       400000  ||
+--    00030         1000       599       600000  ||
+--    00040         1000       799       800000  ||
+--    00050         1000       999      1000000  ||
+--    00060         1000      1199      1200000  ||
+--    00070         1000      1399      1400000  ||
+--    00080         1000      1599      1600000  ||
+--    00090         1000      1799      1800000  ||
+--    00100         1000      1999      2000000  ||
+--    001.000x                2000      2000000  ||
+--
+
+[UNITIGGING/MERS]
+--
+--  22-mers                                                                                           Fraction
 --    Occurrences   NumMers                                                                         Unique Total
 --       1-     1         0                                                                        0.0000 0.0000
---       2-     2        37                                                                        0.0044 0.0008
---       3-     5       643 ***********                                                            0.0247 0.0060
---       6-    10      3924 ********************************************************************** 0.1357 0.0557
---      11-    17      3189 ********************************************************               0.6477 0.4499
---      18-    26       604 **********                                                             0.9667 0.8349
---      27-    37         0                                                                        0.0000 0.0000
---      38-    50         0                                                                        0.0000 0.0000
---      51-    65         1                                                                        0.9986 0.8886
---      66-    82         1                                                                        0.9987 0.8893
---      83-   101         0                                                                        0.0000 0.0000
---     102-   122         0                                                                        0.0000 0.0000
---     123-   145         0                                                                        0.0000 0.0000
---     146-   170         0                                                                        0.0000 0.0000
---     171-   197         0                                                                        0.0000 0.0000
---     198-   226         0                                                                        0.0000 0.0000
---     227-   257         0                                                                        0.0000 0.0000
---     258-   290         0                                                                        0.0000 0.0000
---     291-   325         0                                                                        0.0000 0.0000
---     326-   362         4                                                                        0.9988 0.8926
---     363-   401         0                                                                        0.0000 0.0000
---     402-   442         0                                                                        0.0000 0.0000
---     443-   485         0                                                                        0.0000 0.0000
---     486-   530         0                                                                        0.0000 0.0000
---     531-   577         0                                                                        0.0000 0.0000
---     578-   626         0                                                                        0.0000 0.0000
---     627-   677         0                                                                        0.0000 0.0000
---     678-   730         0                                                                        0.0000 0.0000
---     731-   785         0                                                                        0.0000 0.0000
---     786-   842         0                                                                        0.0000 0.0000
---     843-   901         0                                                                        0.0000 0.0000
---     902-   962         0                                                                        0.0000 0.0000
---     963-  1025         2                                                                        0.9993 0.9131
---    1026-  1090         0                                                                        0.0000 0.0000
---    1091-  1157         0                                                                        0.0000 0.0000
---    1158-  1226         0                                                                        0.0000 0.0000
---    1227-  1297         0                                                                        0.0000 0.0000
---    1298-  1370         0                                                                        0.0000 0.0000
---    1371-  1445         0                                                                        0.0000 0.0000
---    1446-  1522         5                                                                        0.9995 0.9386
+--       2-     2        18                                                                        0.0020 0.0000
+--       3-     4        14                                                                        0.0031 0.0000
+--       5-     7        22                                                                        0.0049 0.0001
+--       8-    11        19                                                                        0.0064 0.0001
+--      12-    16        46                                                                        0.0099 0.0003
+--      17-    22        29                                                                        0.0139 0.0006
+--      23-    29        40                                                                        0.0166 0.0008
+--      30-    37        39                                                                        0.0209 0.0014
+--      38-    46        64 *                                                                      0.0256 0.0021
+--      47-    56       106 *                                                                      0.0354 0.0041
+--      57-    67        96 *                                                                      0.0459 0.0067
+--      68-    79        99 *                                                                      0.0553 0.0095
+--      80-    92        81 *                                                                      0.0656 0.0131
+--      93-   106       114 **                                                                     0.0761 0.0173
+--     107-   121       155 **                                                                     0.0870 0.0224
+--     122-   137       123 **                                                                     0.1041 0.0315
+--     138-   154       128 **                                                                     0.1177 0.0398
+--     155-   172       169 ***                                                                    0.1321 0.0496
+--     173-   191       379 ******                                                                 0.1507 0.0639
+--     192-   211      2683 ************************************************                       0.1972 0.1041
+--     212-   232      3897 ********************************************************************** 0.5033 0.3944
+--     233-   254       738 *************                                                          0.9263 0.8315
 --
 --           0 (max occurrences)
---       98144 (total mers, non-unique)
---        8410 (distinct mers, non-unique)
+--     1957987 (total mers, non-unique)
+--        9072 (distinct mers, non-unique)
 --           0 (unique mers)
 
-[CORRECTION/LAYOUT]
---                             original      original
---                            raw reads     raw reads
---   category                w/overlaps  w/o/overlaps
---   -------------------- ------------- -------------
---   Number of Reads                100             0
---   Number of Bases             100000             0
---   Coverage                    10.000         0.000
---   Median                        1000             0
---   Mean                          1000             0
---   N50                           1000             0
---   Minimum                       1000             0
---   Maximum                       1000             0
+[UNITIGGING/OVERLAPS]
+--   category            reads     %          read length        feature size or coverage  analysis
+--   ----------------  -------  -------  ----------------------  ------------------------  --------------------
+--   middle-missing          0    0.00        0.00 +- 0.00             0.00 +- 0.00       (bad trimming)
+--   middle-hump             0    0.00        0.00 +- 0.00             0.00 +- 0.00       (bad trimming)
+--   no-5-prime              1    0.05     1000.00 +- 0.00             2.00 +- 0.00       (bad trimming)
+--   no-3-prime              1    0.05     1000.00 +- 0.00            11.00 +- 0.00       (bad trimming)
 --   
---                                        --------corrected---------  ----------rescued----------
---                             evidence                     expected                     expected
---   category                     reads            raw     corrected            raw     corrected
---   -------------------- -------------  ------------- -------------  ------------- -------------
---   Number of Reads                100             99            99              0             0
---   Number of Bases             100000          99000         97446              0             0
---   Coverage                    10.000          9.900         9.745          0.000         0.000
---   Median                        1000           1000           989              0             0
---   Mean                          1000           1000           984              0             0
---   N50                           1000           1000           989              0             0
---   Minimum                       1000           1000           672              0             0
---   Maximum                       1000           1000           989              0             0
+--   low-coverage            0    0.00        0.00 +- 0.00             0.00 +- 0.00       (easy to assemble, potential for lower quality consensus)
+--   unique               1866   93.30     1000.00 +- 0.00           165.58 +- 34.29      (easy to assemble, perfect, yay)
+--   repeat-cont             0    0.00        0.00 +- 0.00             0.00 +- 0.00       (potential for consensus errors, no impact on assembly)
+--   repeat-dove             0    0.00        0.00 +- 0.00             0.00 +- 0.00       (hard to assemble, likely won't assemble correctly or even at all)
 --   
---                        --------uncorrected--------
---                                           expected
---   category                       raw     corrected
---   -------------------- ------------- -------------
---   Number of Reads                  1             1
---   Number of Bases               1000           989
---   Coverage                     0.100         0.099
---   Median                        1000           989
---   Mean                          1000           989
---   N50                              0             0
---   Minimum                       1000           989
---   Maximum                       1000           989
---   
---   Maximum Memory           533540606
+--   span-repeat             0    0.00        0.00 +- 0.00             0.00 +- 0.00       (read spans a large repeat, usually easy to assemble)
+--   uniq-repeat-cont       26    1.30     1000.00 +- 0.00                                (should be uniquely placed, low potential for consensus errors, no impact on assembly)
+--   uniq-repeat-dove      106    5.30     1000.00 +- 0.00                                (will end contigs, potential to misassemble)
+--   uniq-anchor             0    0.00        0.00 +- 0.00             0.00 +- 0.00       (repeat read, with unique section, probable bad read)
+
+[UNITIGGING/ADJUSTMENT]
+-- No report available.
+
+[UNITIGGING/ERROR RATES]
+--  
+--  ERROR RATES
+--  -----------
+--                                                   --------threshold------
+--  3818                         fraction error      fraction        percent
+--  samples                              (1e-5)         error          error
+--                   --------------------------      --------       --------
+--  command line (-eg)                           ->      0.00        0.0000%  (enabled)
+--  command line (-ef)                           ->  -----.--      ---.----%
+--  command line (-eM)                           ->      0.00        0.0000%  (enabled)
+--  mean + std.dev       0.00 +-  12 *     0.00  ->      0.00        0.0000%  (enabled)
+--  median + mad         0.00 +-  12 *     0.00  ->      0.00        0.0000%  (enabled)
+--  90th percentile                              ->      1.00        0.0010%
+--  
+--  BEST EDGE FILTERING
+--  -------------------
+--  At graph threshold 0.0000%, reads:
+--    available to have edges:         1820
+--    with at least one edge:          1820
+--  
+--  At max threshold 0.0000%, reads:  (not computed)
+--    available to have edges:            0
+--    with at least one edge:             0
+--  
+--  At tight threshold 0.0000%, reads with:
+--    both edges below error threshold:      1820  (80.00% minReadsBest threshold = 1456)
+--    one  edge  above error threshold:         0
+--    both edges above error threshold:         0
+--    at least one edge:                     1820
+--  
+--  At loose threshold 0.0000%, reads with:
+--    both edges below error threshold:      1820  (80.00% minReadsBest threshold = 1456)
+--    one  edge  above error threshold:         0
+--    both edges above error threshold:         0
+--    at least one edge:                     1820
+--  
+--  
+--  INITIAL EDGES
+--  -------- ----------------------------------------
+--       180 reads are contained
+--      8002 reads have no best edges (singleton)
+--         2 reads have only one best edge (spur) 
+--                  2 are mutual best
+--      1816 reads have two best edges 
+--                  0 have one mutual best edge
+--               1816 have two mutual best edges
+--  
+--  
+--  FINAL EDGES
+--  -------- ----------------------------------------
+--       180 reads are contained
+--      8002 reads have no best edges (singleton)
+--         2 reads have only one best edge (spur) 
+--                  2 are mutual best
+--      1816 reads have two best edges 
+--                  0 have one mutual best edge
+--               1816 have two mutual best edges
+--  
+--  
+--  EDGE FILTERING
+--  -------- ------------------------------------------
+--         0 reads are ignored
+--         2 reads have a gap in overlap coverage
+--         0 reads have lopsided best edges
+
+[UNITIGGING/CONTIGS]
+-- Found, in version 1, after unitig construction:
+--   contigs:      1 sequences, total length 9983 bp (including 0 repeats of total length 0 bp).
+--   bubbles:      0 sequences, total length 0 bp.
+--   unassembled:  2 sequences, total length 2000 bp.
+--
+-- Contig sizes based on genome size 10kbp:
+--
+--            NG (bp)  LG (contigs)    sum (bp)
+--         ----------  ------------  ----------
+--     10        9983             1        9983
+--     20        9983             1        9983
+--     30        9983             1        9983
+--     40        9983             1        9983
+--     50        9983             1        9983
+--     60        9983             1        9983
+--     70        9983             1        9983
+--     80        9983             1        9983
+--     90        9983             1        9983
+--
+
+[UNITIGGING/CONSENSUS]
+-- Found, in version 2, after consensus generation:
+--   contigs:      1 sequences, total length 9983 bp (including 0 repeats of total length 0 bp).
+--   bubbles:      0 sequences, total length 0 bp.
+--   unassembled:  2 sequences, total length 2000 bp.
+--
+-- Contig sizes based on genome size 10kbp:
+--
+--            NG (bp)  LG (contigs)    sum (bp)
+--         ----------  ------------  ----------
+--     10        9983             1        9983
+--     20        9983             1        9983
+--     30        9983             1        9983
+--     40        9983             1        9983
+--     50        9983             1        9983
+--     60        9983             1        9983
+--     70        9983             1        9983
+--     80        9983             1        9983
+--     90        9983             1        9983
+--
 

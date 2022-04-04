@@ -1,0 +1,16 @@
+lenUnassembled ng10        1000 bp   lg10       2   sum       2000 bp
+lenUnassembled sum       2000 (genomeSize 10000)
+lenUnassembled num          2
+lenUnassembled ave       1000
+lenContig ng10        9983 bp   lg10       1   sum       9983 bp
+lenContig ng20        9983 bp   lg20       1   sum       9983 bp
+lenContig ng30        9983 bp   lg30       1   sum       9983 bp
+lenContig ng40        9983 bp   lg40       1   sum       9983 bp
+lenContig ng50        9983 bp   lg50       1   sum       9983 bp
+lenContig ng60        9983 bp   lg60       1   sum       9983 bp
+lenContig ng70        9983 bp   lg70       1   sum       9983 bp
+lenContig ng80        9983 bp   lg80       1   sum       9983 bp
+lenContig ng90        9983 bp   lg90       1   sum       9983 bp
+lenContig sum       9983 (genomeSize 10000)
+lenContig num          1
+lenContig ave       9983
