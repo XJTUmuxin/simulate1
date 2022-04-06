@@ -6,7 +6,7 @@ string mis_seq_path = "./../mis_seq/";
 int expect_len = 10000;
 int min_mic_len = 1000; 
 int substrings_len = 1000;
-int substrings_num = 400;
+int substrings_num = 100;
 int max_repeat_num = 60;
 int mic_num = 5;
 int error_rate = 15;
@@ -70,13 +70,14 @@ void create_mis_seq(string& init_seq,string& mis_seq){
 
 void get_substrings(string& init_seq,vector<string>& substrings){
     //vector<int> temp(10,0);
+    int init_seq_len = init_seq.size();
     for(int i=0;i<substrings_num;++i){
         int mid_index;
         int left_index;
         int right_index;
-        mid_index = rand()%init_seq.size();
+        mid_index = rand()%init_seq_len;
         left_index = max(0,mid_index-substrings_len/2);
-        right_index = min(substrings_len-1,mid_index+substrings_len/2);
+        right_index = min(init_seq_len-1,mid_index+substrings_len/2);
         int len = right_index-left_index+1;
         //temp[start_index/1000]++;
         substrings.emplace_back(init_seq,left_index,len);
@@ -84,8 +85,11 @@ void get_substrings(string& init_seq,vector<string>& substrings){
     //for(auto i:temp)cout<<i<<endl;
 }
 
-int main(){
-    
+int main(int argc,char* argv[]){
+    if(argc>1){
+        int coverage = stoi(argv[1]);
+        substrings_num = coverage*expect_len/substrings_len;
+    }
     srand(static_cast<unsigned>(time(0)));
     string init_seq = "";
     string mis_seq = "";

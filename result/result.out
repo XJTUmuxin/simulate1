@@ -1,20 +1,56 @@
 AC
-left_index: 2434
-right_index: 2525
-repeate_num: 46
-AG
-left_index: 2905
-right_index: 2964
-repeate_num: 30
+left_index: 3474
+right_index: 3505
+repeate_num: 16
+GA
+left_index: 7290
+right_index: 7369
+repeate_num: 40
+AT
+left_index: 9208
+right_index: 9607
+repeate_num: 200
+AT
+left_index: 9624
+right_index: 9643
+repeate_num: 10
+AT
+left_index: 9654
+right_index: 9665
+repeate_num: 6
+AT
+left_index: 9668
+right_index: 9677
+repeate_num: 5
+AT
+left_index: 9686
+right_index: 9699
+repeate_num: 7
+AT
+left_index: 9702
+right_index: 9715
+repeate_num: 7
+AT
+left_index: 9728
+right_index: 9745
+repeate_num: 9
 TA
-left_index: 7024
-right_index: 7689
-repeate_num: 333
+left_index: 9747
+right_index: 9758
+repeate_num: 6
+TA
+left_index: 9811
+right_index: 9820
+repeate_num: 5
+TA
+left_index: 9825
+right_index: 9846
+repeate_num: 11
 ATC
-left_index: 6613
-right_index: 6666
-repeate_num: 18
-ATTC
-left_index: 2768
-right_index: 2903
-repeate_num: 34
+left_index: 7589
+right_index: 7720
+repeate_num: 44
+TCAT
+left_index: 6031
+right_index: 6146
+repeate_num: 29

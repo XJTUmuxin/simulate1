@@ -31,13 +31,13 @@ public:
         char temp;
         strstream>>qName>>qLength>>qStart>>qEnd;
         strstream>>temp;
-        qStart = temp=='+'?true:false;
+        qStrand = temp=='+'?true:false;
         strstream>>tName>>tLength>>tStart>>tEnd;
         strstream>>temp;
         tStrand = temp=='+'?true:false;
         strstream>>score>>numMatch>>numMismatch>>numIns>>numDel>>mapQV
         >>qAlignedSeq>>matchPattern>>tAlignedSeq;
-        matchPercentage = ((float)numMatch/(float)qLength);
+        matchPercentage = ((float)numMatch/(float)(qEnd-qStart));
         //cout<<qName<<qLength<<qStart<<qEnd<<qStrand<<tName<<tLength<<tStart<<tEnd<<tStrand<<score<<numMatch<<numMismatch<<numIns<<numDel<<mapQV<<qAlignedSeq<<matchPattern<<tAlignedSeq<<endl;
     }
 };
@@ -59,12 +59,12 @@ int main(){
     while(ifs){
         getline(ifs,line);
         map_result result(line);
-        if(result.matchPercentage>=0.8 && result.numIns==result.numDel){
+        if(result.matchPercentage>=0.8 && result.numIns==result.numDel && (result.tStrand == result.qStrand)){
             //reads_num++;
             int index = 0;
             for(int i=result.tStart;i<result.tEnd;++i){
                 while(result.qAlignedSeq[index]=='-')index++;
-                if(index>=result.qLength)break;
+                if(index>=result.qAlignedSeq.size())break;
                 base_count[i][base_map[result.qAlignedSeq[index]]].second++;
                 index++;
             }           
@@ -73,9 +73,9 @@ int main(){
     //cout<<reads_num<<endl;
     for(int i=0;i<seq_len;++i){
         sort(base_count[i].begin(),base_count[i].end(),[](const pair<char,int>p1,const pair<char,int>p2){return p1.second>p2.second;});
-        //if(base_count[i][0].second>0){
+        if(base_count[i][0].second>0){
             seq[i] = base_count[i][0].first;
-        //}
+        }
     }
     ifs.close();
     ifs.clear();
