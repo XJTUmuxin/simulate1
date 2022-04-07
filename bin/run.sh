@@ -1,6 +1,6 @@
 #！/bin/sh
 echo -e "create simulate data\n"
-./create_seq 20
+./create_seq 6
 echo -e "map  the accurate sub_seq to the mis_seq by using blasr\n"
 
 echo -e "command：\n"

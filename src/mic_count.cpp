@@ -45,18 +45,21 @@ void mic_count(string &seq){
                         micros.emplace_back(motif,left_index,index-1,repeate_num);
                     }
                 }
-                auto iter = micro_area.upper_bound(index+len);
-                if(iter!=micro_area.begin()){
-                    iter--;
-                    if(iter->second>=index+len){
-                        index = iter->second+1;
-                    }
-                }
                 motif = seq.substr(index,len);
                 left_index = index;
                 repeate_num = 1;
             }
             index += len;
+            auto iter = micro_area.upper_bound(index);
+            if(iter!=micro_area.begin()){
+                iter--;
+                if(iter->first<=index && iter->second>=index+len){
+                    index = iter->second+1;
+                    motif = seq.substr(index,len);
+                    left_index = index;
+                    repeate_num = 1;
+                }
+            }
         }
         if(repeate_num+1>=min_repeat_num){
             for(int i=len-1;i>=1;--i){
