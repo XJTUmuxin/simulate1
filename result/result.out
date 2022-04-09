@@ -1,92 +1,36 @@
 AC
-left_index: 523
-right_index: 538
-repeate_num: 8
-AG
-left_index: 1625
-right_index: 1636
-repeate_num: 6
-GA
-left_index: 1658
-right_index: 1667
-repeate_num: 5
-GA
-left_index: 1686
-right_index: 1701
-repeate_num: 8
-GA
-left_index: 1704
-right_index: 1715
-repeate_num: 6
-AG
-left_index: 1717
-right_index: 1726
-repeate_num: 5
-GA
-left_index: 1744
-right_index: 1757
-repeate_num: 7
-GA
-left_index: 1760
-right_index: 1769
-repeate_num: 5
-GA
-left_index: 1772
-right_index: 1793
+left_index: 834
+right_index: 855
 repeate_num: 11
+AG
+left_index: 1618
+right_index: 1685
+repeate_num: 34
+TA
+left_index: 9032
+right_index: 9231
+repeate_num: 100
 AT
-left_index: 3590
-right_index: 3609
-repeate_num: 10
-AT
-left_index: 3612
-right_index: 3629
-repeate_num: 9
-AT
-left_index: 3632
-right_index: 3641
+left_index: 9232
+right_index: 9297
+repeate_num: 33
+TA
+left_index: 9298
+right_index: 9307
 repeate_num: 5
 AT
-left_index: 3650
-right_index: 3671
-repeate_num: 11
-AT
-left_index: 3674
-right_index: 3687
-repeate_num: 7
-AT
-left_index: 3712
-right_index: 3725
-repeate_num: 7
+left_index: 9320
+right_index: 9359
+repeate_num: 20
 TA
-left_index: 3787
-right_index: 3804
-repeate_num: 9
-TA
-left_index: 3817
-right_index: 3828
-repeate_num: 6
-TA
-left_index: 3899
-right_index: 3910
-repeate_num: 6
-AT
-left_index: 3912
-right_index: 3925
-repeate_num: 7
-AT
-left_index: 3934
-right_index: 3945
-repeate_num: 6
-AT
-left_index: 3958
-right_index: 3967
-repeate_num: 5
-TCA
-left_index: 3293
-right_index: 3433
-repeate_num: 47
-CATT
-left_index: 1447
-right_index: 1466
-repeate_num: 5
+left_index: 9360
+right_index: 9407
+repeate_num: 24
+ATC
+left_index: 3188
+right_index: 3427
+repeate_num: 80
+TCAT
+left_index: 1445
+right_index: 1616
+repeate_num: 43

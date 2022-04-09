@@ -54,13 +54,22 @@ void create_mis_seq(string& init_seq,string& mis_seq){
     int real_len = init_seq.size();
     for(int i=0;i<real_len;++i){
         int temp = rand()%100;
-        if(temp<error_rate){
+        if(temp<5){
             char base;
             while(true){
                 base = bases[rand()%5];
                 if(base != init_seq[i])break;
             }
             mis_seq += base;
+        }
+        else if(temp<error_rate && temp>=5){
+            if(rand()%2){
+                continue;               //deletion
+            }
+            else{                       //insertion
+                mis_seq += init_seq[i];
+                mis_seq += init_seq[i]; 
+            }
         }
         else{
             mis_seq += init_seq[i];

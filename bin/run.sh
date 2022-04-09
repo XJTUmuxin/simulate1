@@ -1,6 +1,6 @@
 #！/bin/sh
 echo -e "create simulate data\n"
-./create_seq 6
+./create_seq 30
 echo -e "map  the accurate sub_seq to the mis_seq by using blasr\n"
 
 echo -e "command：\n"
@@ -21,6 +21,16 @@ echo -e "\ncorrect the mis_seq according to the map result\n"
 ./correct
 
 echo -e "get the similarity between the init_seq and mis_seq and the similarity between the init_seq and corrected_seq\n"
+
+blasr   ./../corrected/corrected.fasta\
+        ./../init_seq/init_seq.fasta\
+        --header --bestn 1 -m 5 \
+        --out ./../compare/corrected_compare.out
+
+blasr   ./../mis_seq/mis_seq.fasta\
+        ./../init_seq/init_seq.fasta\
+        --header --bestn 1 -m 5 \
+        --out ./../compare/mis_compare.out
 
 ./compare
 echo -e "\ncount the microsatellite of the corrected_seq\n"
